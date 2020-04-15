@@ -1,0 +1,24 @@
+.song {
+    width: 340px;
+    padding: 10px;
+    color: #9e9e9e;
+    background-color: #37474f;
+    cursor: pointer;
+    border-bottom: solid 1px #455a64;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.song * {
+    transition: color 0.4s;
+}
+
+.song:hover {
+    background-color: #455a64;
+}
+
+.song .duration {
+    font-size: 14px;
+    margin-left: auto;
+}
