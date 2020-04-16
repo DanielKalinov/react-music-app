@@ -3,6 +3,7 @@ import './App.css';
 
 import SongList from './components/SongList';
 import Controls from './components/Controls';
+import ProgressBar from './components/ProgressBar';
 
 class App extends Component {
   constructor(props) {
@@ -209,6 +210,8 @@ class App extends Component {
           onSkipNextClick={this.onSkipNextClick}
           playing={this.state.playing} 
         />
+
+        <ProgressBar audio={this.audio}/>
       </div>
     )
   }

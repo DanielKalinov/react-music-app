@@ -1,0 +1,19 @@
+.progress-container {
+    height: 6px;
+    width: 250px;
+    background-color: #424242;
+    display: flex;
+    align-items: center;
+}
+
+.progress-container .progress-fill {
+    height: 6px;
+    background-color: #455a64;
+}
+
+.progress-handle {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: white;
+}
