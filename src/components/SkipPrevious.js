@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class SkipPrevious extends Component {
-    skipPrevious = () => {
-        this.props.onSkipPreviousClick();
+function SkipPrevious(props) {
+    const skipPrevious = () => {
+        props.onSkipPreviousClick();
     }
 
-    render() {
-        return <i className="material-icons" onClick={this.skipPrevious}>skip_previous</i>;
-    }
+    return <i className="material-icons" onClick={skipPrevious}>skip_previous</i>;
 }
 
 export default SkipPrevious;

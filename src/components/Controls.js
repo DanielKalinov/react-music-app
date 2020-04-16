@@ -1,22 +1,25 @@
-import React, { Component } from 'react';
-import './Controls.css'
+import React from 'react';
+import './css/Controls.css'
 
+import ProgressBar from './ProgressBar';
 import SkipPrevious from './SkipPrevious';
 import SkipNext from './SkipNext';
 import PlayPause from './PlayPause';
 
-export class Controls extends Component {
-    render() {
-        return (
-            <div className='controls'>
-                <SkipPrevious onSkipPreviousClick={this.props.onSkipPreviousClick}/>
+function Controls(props) {
+    return (
+        <div className='controls'>
+            <ProgressBar audio={props.audio}/>
 
-                <PlayPause playing={this.props.playing} onPlayPauseClick={this.props.onPlayPauseClick}/>
-                
-                <SkipNext onSkipNextClick={this.props.onSkipNextClick}/>
+            <div className='buttons'>
+                <SkipPrevious onSkipPreviousClick={props.onSkipPreviousClick}/>
+
+                <PlayPause playing={props.playing} onPlayPauseClick={props.onPlayPauseClick}/>
+
+                <SkipNext onSkipNextClick={props.onSkipNextClick}/>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default Controls;

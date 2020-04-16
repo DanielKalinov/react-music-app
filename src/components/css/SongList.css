@@ -2,4 +2,9 @@
     height: 400px;
     width: fit-content;
     overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.song-list::-webkit-scrollbar {
+    display: none;
 }

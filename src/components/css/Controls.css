@@ -1,0 +1,12 @@
+.controls {
+    width: 400px;
+    padding: 10px;
+    background-color: #37474f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+

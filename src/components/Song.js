@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import './Song.css';
+import React from 'react';
+import './css/Song.css';
 
-class Song extends Component {
-    activeStyle() {
-        if(this.props.id === this.props.song.id) {
+function Song(props) {
+    const activeStyle = () => {
+        if(props.id === props.song.id) {
             return { 
                 color: '#fafafa', 
                 fontWeight: 'bold' 
@@ -11,16 +11,14 @@ class Song extends Component {
         } 
     }
 
-    render() {
-        return (
-            <div className='song' onClick={() => this.props.onSongClick(this.props.song)}>
-                <div>
-                    <p style={this.activeStyle()} className='title'>{this.props.song.title}</p>
-                </div>
-                <p className='duration' style={this.activeStyle()}>{this.props.song.duration}</p>
+    return (
+        <div className='song' onClick={() => props.onSongClick(props.song)}>
+            <div>
+                <p style={activeStyle()} className='title'>{props.song.title}</p>
             </div>
-        )
-    }
+            <p className='duration' style={activeStyle()}>{props.song.duration}</p>
+        </div>
+    )
 }
 
 export default Song;

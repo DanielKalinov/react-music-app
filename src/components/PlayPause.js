@@ -1,21 +1,18 @@
 import React from 'react';
-import { Component } from 'react';
 
-class PlayPause extends Component {
-    playPause = () => {
-        if(this.props.playing) {
-            this.props.onPlayPauseClick();
+function PlayPause(props) {
+    const playPause = () => {
+        if(props.playing) {
+            props.onPlayPauseClick();
         } else {
-            this.props.onPlayPauseClick();
+            props.onPlayPauseClick();
         }
     }
 
-    render() {
-        if(this.props.playing) {
-            return <i className="material-icons" onClick={this.playPause}>pause</i>
-        } else {
-            return <i className="material-icons" onClick={this.playPause}>play_arrow</i>
-        }
+    if(props.playing) {
+        return <i className="material-icons" onClick={playPause}>pause</i>
+    } else {
+        return <i className="material-icons" onClick={playPause}>play_arrow</i>
     }
 }
 

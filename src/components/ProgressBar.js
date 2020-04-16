@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './ProgressBar.css';
+import './css/ProgressBar.css';
 
 export class ProgressBar extends Component {
     constructor(props) {
         super(props)
-    
+        
         this.fill = React.createRef();
     }
 

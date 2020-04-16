@@ -3,7 +3,6 @@ import './App.css';
 
 import SongList from './components/SongList';
 import Controls from './components/Controls';
-import ProgressBar from './components/ProgressBar';
 
 class App extends Component {
   constructor(props) {
@@ -198,20 +197,25 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    this.audio.onended = () => {
+      this.setStateToNextSongId();
+    }
+  }
+
   render() {
     return(
       <div>
         <SongList songs={this.state.songs} onSongClick={this.onSongClick} id={this.state.id} playing={this.state.playing}/>
 
         <Controls 
+          id={this.state.id}
+          playing={this.state.playing}
+          audio={this.audio}
           onSkipPreviousClick={this.onSkipPreviousClick}
           onPlayPauseClick={this.onPlayPauseClick}
-          id={this.state.id}
           onSkipNextClick={this.onSkipNextClick}
-          playing={this.state.playing} 
         />
-
-        <ProgressBar audio={this.audio}/>
       </div>
     )
   }
