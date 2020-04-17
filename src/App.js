@@ -14,97 +14,86 @@ class App extends Component {
           id: 0,
           src: 'songs/intro.mp3',
           title: 'Intro',
-          artist: 'HOME',
           duration: '3:09'
         },
         {
           id: 1,
           src: 'songs/native.mp3',
           title: 'Native',
-          artist: 'HOME',
           duration: '4:02'
         },
         {
           id: 2,
           src: 'songs/decay.mp3',
           title: 'Decay',
-          artist: 'HOME',
           duration: '4:11'
         },
         {
           id: 3,
           src: 'songs/oort cloud.mp3',
           title: 'Oort Cloud',
-          artist: 'HOME',
           duration: '3:25'
         },
         {
           id: 4,
           src: 'songs/tides.mp3',
           title: 'Tides',
-          artist: 'HOME',
           duration: '3:57'
         },
         {
           id: 5,
           src: 'songs/nights (i wish i could be there).mp3',
           title: 'Nights (I Wish I Could Be There)',
-          artist: 'HOME',
           duration: '3:05'
         },
         {
           id: 6,
           src: 'songs/odyssey.mp3',
           title: 'Odyssey',
-          artist: 'HOME',
           duration: '6:09'
         },
         {
           id: 7,
           src: 'songs/new machines.mp3',
           title: 'New Machines',
-          artist: 'HOME',
           duration: '2:57'
         },
         {
           id: 8,
           src: 'songs/resonance.mp3',
           title: 'Resonance',
-          artist: 'HOME',
           duration: '3:32'
         },
         {
           id: 9,
           src: 'songs/come back down.mp3',
           title: 'Come Back Down',
-          artist: 'HOME',
           duration: '4:53'
         },
         {
           id: 10,
           src: 'songs/half moon.mp3',
           title: 'Half Moon',
-          artist: 'HOME',
           duration: '4:21'
         },
         {
           id: 11,
           src: 'songs/on the way out.mp3',
           title: 'On The Way Out',
-          artist: 'HOME',
           duration: '4:01'
         },
       ],
       playing: false,
       id: 0,
       title: '',
-      artist: ''
+      duration: ''
     }
 
     this.firstSong = this.state.songs[0];
 
     this.state.title = this.firstSong.title;
     this.state.artist = this.firstSong.artist;
+    this.state.duration = this.firstSong.duration;
 
     this.audio = new Audio(this.firstSong.src);
   }
@@ -126,8 +115,8 @@ class App extends Component {
       this.setState({ 
         playing: true, 
         id: clickedSong.id, 
-        title: clickedSong.title, 
-        artist: clickedSong.artist 
+        title: clickedSong.title,
+        duration: clickedSong.duration 
       }, 
       () => {
         this.audio.src = clickedSong.src;
@@ -177,7 +166,7 @@ class App extends Component {
           playing: true, 
           id: song.id,
           title: song.title,
-          artist: song.artist
+          duration: song.duration
         }, 
         () => {            
           this.audio.src = song.src;
@@ -210,6 +199,8 @@ class App extends Component {
 
         <Controls 
           id={this.state.id}
+          title={this.state.title}
+          duration={this.state.duration}
           playing={this.state.playing}
           audio={this.audio}
           onSkipPreviousClick={this.onSkipPreviousClick}

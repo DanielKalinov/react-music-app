@@ -2,7 +2,7 @@
     height: 400px;
     width: fit-content;
     overflow-y: scroll;
-    scrollbar-width: none;
+    scrollbar-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0);
 }
 
 .song-list::-webkit-scrollbar {
