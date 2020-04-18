@@ -195,7 +195,12 @@ class App extends Component {
   render() {
     return(
       <div>
-        <SongList songs={this.state.songs} onSongClick={this.onSongClick} id={this.state.id} playing={this.state.playing}/>
+        <SongList 
+          songs={this.state.songs} 
+          id={this.state.id} 
+          playing={this.state.playing}
+          onSongClick={this.onSongClick} 
+        />
 
         <Controls 
           id={this.state.id}

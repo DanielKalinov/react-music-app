@@ -1,12 +1,29 @@
 .controls {
-    width: 400px;
-    padding: 10px;
-    background-color: #37474f;
+    position: relative;
+    width: 480px;
+    padding: 20px;
+    background-color: #212121;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
+.controls .title {
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
 
+@media screen and (max-width: 480px) {
+    .controls .title {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .controls {
+        width: 100vw;
+    }
+}
 

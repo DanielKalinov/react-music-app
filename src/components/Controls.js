@@ -9,9 +9,10 @@ import PlayPause from './PlayPause';
 function Controls(props) {
     return (
         <div className='controls'>
-            {props.title}
-            <br/>
+            <p className='title'>{props.title}</p>
+
             <ProgressBar audio={props.audio} duration={props.duration}/>
+            
             <div className='buttons'>
                 <SkipPrevious onSkipPreviousClick={props.onSkipPreviousClick}/>
 

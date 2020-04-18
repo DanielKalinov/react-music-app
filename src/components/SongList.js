@@ -5,7 +5,13 @@ import Song from './Song';
 
 function SongList(props) {
     const renderedList = props.songs.map(song => (
-        <Song key={song.id} song={song} onSongClick={props.onSongClick} id={props.id} playing={props.playing}/>
+        <Song 
+            key={song.id} 
+            id={props.id} 
+            playing={props.playing}
+            song={song} 
+            onSongClick={props.onSongClick} 
+        />
     ));
 
     return (

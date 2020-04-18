@@ -1,27 +1,36 @@
+.progress-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 .progress-container {
-    height: 6px;
-    width: 250px;
-    background-color: #424242;
-    display: flex;
-    align-items: center;
+    height: 4px;
+    width: 100%;
+    background-color: #263238;
 }
 
-.progress-container .progress-fill {
-    height: 6px;
-    background-color: #455a64;
-}
-
-.progress-handle {
-    height: 14px;
-    width: 14px;
-    border-radius: 50%;
-    background-color: white;
+.progress-fill {
+    width: 0;
+    height: 4px;
+    background-color: #1e88e5;
 }
 
 .progress-time {
+    padding: 10px;
     display: flex;
 }
 
-.progress-time .duration {
+.current-time, .duration {
+    font-size: 14px;
+}
+
+.duration {
     margin-left: auto;
+}
+
+@media screen and (max-width: 480px) {
+    .current-time, .duration {
+        font-size: 12px;
+    }
 }

@@ -29,11 +29,10 @@ export class ProgressBar extends Component {
                 <div className="progress-container">
                     <div className="progress-fill" ref={this.fill}>
                     </div>
-                    <div className="progress-handle"></div>
                 </div>
                 <div className='progress-time'>
-                    <span className='current-time' ref={this.currentTime}>0:00</span>
-                    <span className='duration'>{this.props.duration}</span>
+                    <p className='current-time' ref={this.currentTime}>0:00</p>
+                    <p className='duration'>{this.props.duration}</p>
                 </div>
             </div>
         )

@@ -2,10 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box !important;
+    user-select: none;
 }
 
 body {
+    height: 100vh;
     background-color: #263238;
     color: #fafafa;
     font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

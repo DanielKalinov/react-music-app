@@ -5,7 +5,7 @@ function SkipPrevious(props) {
         props.onSkipPreviousClick();
     }
 
-    return <i className="material-icons" onClick={skipPrevious}>skip_previous</i>;
+    return <i className="material-icons" onClick={skipPrevious} style={{ fontSize: '28px', cursor: 'pointer' }}>skip_previous</i>;
 }
 
 export default SkipPrevious;

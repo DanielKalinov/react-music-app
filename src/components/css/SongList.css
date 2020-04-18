@@ -1,10 +1,8 @@
 .song-list {
     height: 400px;
-    width: fit-content;
     overflow-y: scroll;
-    scrollbar-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0);
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1); 
 }
 
-.song-list::-webkit-scrollbar {
-    display: none;
-}
+
+
